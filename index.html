@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de reserva</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header><h1>Reserva de habitación de hotel</h1></header>
+    <main>
+        <form name="formReserva">
+
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="nombre">* Nombre:</label>
+                    <input 
+                    type="text" 
+                    id="nombre"
+                    name="nombre"
+                    autofocus
+                    pattern = "[A-Za-z]{2,}"
+                    >
+                    <p id="errorNombre"></p>
+                </div>
+                <div>
+                    <label for="apellido">* Apellido</label>
+                    <input 
+                    type="text" 
+                    id="apellido"
+                    name="apellido"
+                    pattern = "[A-Za-z]{2,}"
+                    >
+                    <p id="errorApellido"></p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Datos de la reserva</legend>
+                <div>
+                    <label for="adultos">Adultos :</label>
+                    <input 
+                    type="number" 
+                    name="adultos" 
+                    id="adultos"
+                    min="1"
+                    max="3"
+                    value="2"
+                    >
+                </div>
+                <div>
+                    <label for="ninos">Niños :</label>
+                    <input 
+                    type="number" 
+                    name="ninos" 
+                    id="ninos"
+                    min="0"
+                    max="3"
+                    value="0"
+                    >
+                </div>
+                <div>
+                    <label for="entrada">Entrada :</label>
+                    <input type="date" name="entrada" id="entrada">
+                </div>
+                <div>
+                    <label for="salida">Salida :</label>
+                    <input type="date" name="salida" id="salida">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tipo de estancia</legend>
+                    
+                    <label >
+<input type="radio" name="estancia" value="alojamiento" checked> Sólo alojamiento
+                    </label>
+                </div>
+                <div> <label>
+                        <input type="radio" name="estancia" value="desayuno" >
+                    Desayuno
+                    </label>
+                </div>
+                <div>
+                    
+                    <label><input type="radio" name="estancia" value="media">  Media pensión</label>
+                </div>
+                <div>
+                    
+                    <label>
+<input type="radio" name="estancia" value="completa" >
+                    </label>
+                    Pensión completa
+                </div>
+            </fieldset>
+
+            <div>
+<button type="submit">Reservar</button>
+<button type="reset">Cancelar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
