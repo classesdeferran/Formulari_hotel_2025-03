@@ -41,4 +41,24 @@ entradaHTML.addEventListener('change', () => {
     salidaHTML.setAttribute('min', salidaString)
 })
 
+// OBTENER EL OBJETO DIALOG (VENTANA EMERGENTE)
+const ventanaReserva = document.getElementById('ventanaReserva')
 
+// FORMULARIO
+const formReserva = document.forms['formReserva']
+
+formReserva.addEventListener('submit', (evento) => {
+    evento.preventDefault()
+
+    // alert(formReserva['nombre'].value)
+    let resumenReservaDialog = `<p>Reserva realizada a nombre de <span>${formReserva['nombre'].value} ${formReserva['apellido'].value}</span></p>`
+    resumenReservaDialog += `<p>Adultos : <span>${formReserva['adultos'].value}</span> - Niños : <span>${formReserva['ninos'].value}</span></p>`
+    resumenReservaDialog += `<p>Fecha de entrada : <span>${formReserva['entrada'].value}</span></p>`
+    resumenReservaDialog += `<p>Fecha de salida : <span>${formReserva['salida'].value}</span></p>`
+    resumenReservaDialog += `<p>Regimen de estancia : <span>${formReserva['estancia'].value}</span></p>`
+
+    document.getElementById('resumenReserva').innerHTML = resumenReservaDialog
+
+    ventanaReserva.showModal()
+
+})

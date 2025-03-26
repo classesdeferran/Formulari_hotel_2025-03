@@ -79,3 +79,53 @@ input[type="radio"]:checked + label {
 
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+#ventanaReserva {
+    width: 80%;
+    margin: auto;
+    background-color: ivory;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+        border-bottom: 2px solid black;
+        padding-bottom: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+        color: gray;
+    }
+
+    form {
+        border-top: 2px solid black;
+        margin-top: 3rem;
+    }
+
+    span {
+        color: black;
+        font-weight: 600;
+    }
+
+    button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 1rem;
+        background-color: sandybrown;
+        border-color: sandybrown;
+
+        &:hover {
+            background-color: #f2c464;
+            border-color: #f2c464;
+
+        }
+    }
+}
+

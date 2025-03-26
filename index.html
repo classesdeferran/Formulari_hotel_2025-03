@@ -20,7 +20,7 @@
               id="nombre"
               name="nombre"
               autofocus
-              pattern="[A-Za-z]{2,}"
+              pattern="[A-Za-z\sàáèéìíòóùúÀÁÈÉÌÍÒÓÙÚçÇñÑ-]{2,}"
             />
             <p id="errorNombre"></p>
           </div>
@@ -30,7 +30,7 @@
               type="text"
               id="apellido"
               name="apellido"
-              pattern="[A-Za-z]{2,}"
+              pattern="[A-Za-z\sàáèéìíòóùúÀÁÈÉÌÍÒÓÙÚçÇñÑ-]{2,}"
             />
             <p id="errorApellido"></p>
           </div>
@@ -111,6 +111,18 @@
           <button type="reset" id="cancelar">Cancelar</button>
         </div>
       </form>
+
+      <dialog id="ventanaReserva" closedby="any">
+
+        <h2>Resumen de la reserva</h2>
+        <div id="resumenReserva"></div>
+        <form method="dialog">
+          <div>
+            <button id="cerrarDialog">Aceptar</button>
+          </div>
+        </form>
+      </dialog>
+
     </main>
   </body>
 </html>
