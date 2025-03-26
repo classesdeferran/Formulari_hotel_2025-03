@@ -26,6 +26,10 @@ fieldset {
     input {
         border-radius: 5px;
         padding: .5rem 1rem;
+
+        &:focus {
+            background-color: #f2c56482;
+        }
     }
 
     p {

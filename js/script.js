@@ -3,10 +3,16 @@ const apellidoHTML = document.getElementById('apellido')
 
 nombreHTML.addEventListener('change', () => {
     let nombre = nombreHTML.value.trim()
+    document.getElementById('errorNombre').textContent = ""
     // validación de los espacios
     if (nombre.length < 2 ) {
         document.getElementById('errorNombre').textContent = "Hay que introducir un nombre válido"
     }
+
+})
+
+nombreHTML.addEventListener('focusout', () => {
+    nombreHTML.value = nombreHTML.value.trim()
 })
 
 apellidoHTML.addEventListener('change', () => {
